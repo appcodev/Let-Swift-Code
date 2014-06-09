@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Onzondev Innovation Co., Ltd. All rights reserved.
 //
 
-//import ไลบรารี่ Founation เสมอ
+//import ไลบรารี่ Foundation เสมอ
 import Foundation
 
 //ปริ้นข้อความแบบธรรมดา ขึ้นบรรทัดใหม่
@@ -33,26 +33,62 @@ var version2 = 2.0          //inferred as Double
 let intro = 2014            //inferred as Int
 let awesome = true          //inferred as Bool
 
+langName += " Hello"
+//awesome = false
+
+//แสดงข้อความธรรมดา
+println("Hello Let Swift.")
+//แสดงค่าตัวแปรแบบไม่มีข้อความ
+println(langName)
+//แสดงค่าตัวแปรกับข้อความ
+println("Hi! \(langName)")
+
+println("update langName \(langName)")
+
+
 //unicode name
 let ℥ = 33
 var 👮 = "ตำรวจ"
 let เงินได้ = 900
 
-println("\(℥) + \(👮) + \(เงินได้)")
-//33 + ตำรวจ + 900
+println("\(℥) + \(👮) ได้ \(เงินได้)")
+//33 + ตำรวจ ได้ 900
 
 //String
+var myString: String = "I away learn about programming technology."
 let someString = "I appear to be a string"
 //inferred to be of type String
+println("Example Println & Print.")
+println("my string = \(myString)")
+println("some string = \(someString)")
+println(someString)
+print(myString)
+print(" \(myString) \(someString)")
+/*
+my string = I away learn about programming technology.
+some string = I appear to be a string
+*/
+
 
 let components = "~/Documents/Swift".pathComponents
-println("\(components)")//print array
-//out put : [~, Documents, Swift]
+var cmp = myString.pathComponents
+println("\(components) | \(cmp)")//print array
+println(cmp)
+//out put : [~, Documents, Swift] | [I away learn about programming technology.]
 
 //Character
-for ch in "Let Swift 👳.💀.🙊.🙅.💔" {
-    println(ch)
+var myChar: Character = "A"
+var myChar2 = "🚗"
+var myChar3 = "ก"
+println("my character: \(myChar) \(myChar2) \(myChar3)")
+//my character: A 🚗 ก
+
+
+for ch:Character in "Let Swift 👳.💀.🙊.🙅.💔" {
+    //ch = "B"
+    print("\(ch) ")
 }
+//L e t   S w i f t   👳 . 💀 . 🙊 . 🙅 . 💔 🎀..🎀🎀..
 /*
 L
 e
@@ -86,6 +122,12 @@ let instruction = "get " + ribbon1
 println(instruction)
 //output : get 🎀
 
+var inst = "Hello Swift!!"
+inst += ", How are you? "
+inst += "Yes!!"
+println(inst)
+//Hello Swift!!, How are you? Yes!!
+
 //Build complex string
 
 //String Interpolation
@@ -105,8 +147,8 @@ variableString += " and carriage"
 println(variableString)
 //Horse and carriage
 
-let constantString = "Highlander"
-//!! constantString += "and another Highlander"
+//let constantString = "Highlander"
+//constantString += "and another Highlander"
 //error - constantString cannot be changed
 
 //Array and Dictionary

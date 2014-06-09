@@ -185,7 +185,7 @@ label.textAligment = .Right
 //อย่าง ตัวอย่างของการเซ็ตการจัดเรียงแนวของ label จะใส่แค่ .Right เท่านั้น
 */
 
-//Enumerations: Associaed Values
+//Enumerations: Associated Values
 /*
 enum ที่มีทั้งสมาชิกที่ไม่กำหนดค่าเข้าไป และสมาชิกที่สามารถกำหนดค่าได้
 วืิธีการกำหนดค่า ให้เขียนชื่อสมาชิก(ชนิดของตัวแปรเข้าไป) เช่น Delayed(Int)
