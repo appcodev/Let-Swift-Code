@@ -213,7 +213,6 @@ eat cake: 5
 */
 
 //For-In: String and Characters
-
 for ch2 in "i love 🏤💒🏡🏫🏪🚀✈️" {
     print("\(ch2) ")
 }
@@ -224,7 +223,7 @@ println()
 for number in 1...5 {
     println("\(number) times 4 is \(number*4)")
 }
-/* Range แบบ ... จะเป็น <=
+/* Range แบบ n...m จะเป็น ตั้งแต่ n ถึง m
 1 times 4 is 4
 2 times 4 is 8
 3 times 4 is 12
@@ -233,9 +232,10 @@ for number in 1...5 {
 */
 
 for number in 1..5 {
+    //number = 15
     println("\(number) times 4 is \(number*4)")
 }
-/* Range แบบ .. จะเป็น <
+/* Range แบบ n..m จะเป็น ตั้งแต่ n ถึง m-1
 1 times 4 is 4
 2 times 4 is 8
 3 times 4 is 12
@@ -255,6 +255,7 @@ var phoneBook = [   "toa":"099 0099",
                     "toatez":"980 0099",
                     "toatezoozoo":"889 0988"]
 for (name,phoneNumber) in phoneBook {
+    //name = "OZ"
     println("\(name) call \(phoneNumber)")
 }
 /*
@@ -303,7 +304,16 @@ println(legs["toa"])
 
 //continue ... Beyond the Basic
 
-
+let myLine:String[] = ["A","B","C","DDDD"]
+for line in myLine {
+    println(line)
+}
+/*
+A
+B
+C
+DDDD
+*/
 
 
 
