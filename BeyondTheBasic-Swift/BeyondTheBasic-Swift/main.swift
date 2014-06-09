@@ -60,6 +60,28 @@ if legCount == 0 { //จะใช้แบบ if(legCount==0) ก็ได้
 }
 //It hops
 
+//if-statement enum
+enum Day {
+    case Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+}
+
+let myDay = Day.Monday
+let yourDay = Day.Monday
+
+if  myDay == yourDay {
+    println("Same")
+}else {
+    println("Difference")
+}
+
+let myName = "Swift"
+if  myName == "Swift" {
+    println("Equal")
+}else{
+    println("Not Equal")
+}
+//Equal
+
 
 //Switch
 switch legCount! {
@@ -97,17 +119,40 @@ switch letter {
 }
 //member in 5 5K 5
 
+let myDay2 = Day.Friday
+
+switch myDay2 {
+    case Day.Monday:
+        println("On Monday")
+    case Day.Tuesday:
+        println("On Tuesday")
+    case Day.Wednesday:
+        println("On Wednesday")
+    case Day.Thursday:
+        println("On Thursday")
+    case Day.Friday:
+        println("On Friday")
+    case Day.Saturday:
+        println("On Saturday")
+    case Day.Sunday:
+        println("On Sunday")
+//    default:
+//        println("On otherday")
+}
+println(myDay2)
+//On Friday
+
 //Matching Value Range
-let myScore = 49.0001
+let myScore = 80
 
 switch myScore {
-    case 80.0...100.0:
+    case 80...100:
         println("get A")
-    case 70.0..80.0:
+    case 70..80:
         println("get B")
-    case 60.0..70.0:
+    case 60..70:
         println("get C")
-    case 50.0..60.0:
+    case 50..60:
         println("get D")
     default:
         println("get E")
