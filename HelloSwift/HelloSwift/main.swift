@@ -156,6 +156,7 @@ let compPath = "~/a/b/s/ccc".pathComponents
 
 //การประกาศค่า Array แบบอนุมานชนิดข้อมูล
 var names = ["adaydesign","appcodev","Learn Objective-C","Let Swift"]
+let myArray = [1,2,"Hello",8.901,"A"]
 //array of string values
 var numberOfLegs = ["ant":6, "snake":0, "cheetah":4]
 //a dictionary with string Keys and Int values
@@ -177,6 +178,63 @@ println(name2)
 var name3: String[] = ["Toa","Toate","Toatez","ToateZooZoo"];
 println(name3)
 //[Toa, Toate, Toatez, ToateZooZoo]
+let myNumber: Int[] = [12,22,444,55,32]
+println(myNumber)
+//[12, 22, 444, 55, 32]
+
+let myMoney: Double[] = [110,220,330,440,550]
+for money in myMoney {
+    println("money \(money) half \(money*0.5) 1/3: \(money/3.0)")
+}
+/*
+money 110.0 half 55.0 1/3: 36.6666666666667
+money 220.0 half 110.0 1/3: 73.3333333333333
+money 330.0 half 165.0 1/3: 110.0
+money 440.0 half 220.0 1/3: 146.666666666667
+money 550.0 half 275.0 1/3: 183.333333333333
+*/
+
+for index in 0..myMoney.count{
+    println("> money \(myMoney[index])")
+}
+/*
+> money 110.0
+> money 220.0
+> money 330.0
+> money 440.0
+> money 550.0
+*/
+
+var myMember = Array<String>()
+//var myMember:String[] = ["Ant","Bat","Cat"]
+myMember += ["Ant","Bat","Cat"]
+myMember += ["Dog","Eagle","Flamingo"]
+println(myMember)
+//[Ant, Bat, Cat, Dog, Eagle, Flamingo]
+
+myMember.append("Giraffe")
+myMember.append("Horse")
+println(myMember)
+//[Ant, Bat, Cat, Dog, Eagle, Flamingo, Giraffe, Horse]
+
+
+myMember[0] = "An Ant"
+myMember[1] = "A Bat"
+myMember[2] = "Two Cats"
+println(myMember)
+//[An Ant, A Bat, Two Cats, Dog, Eagle, Flamingo, Giraffe, Horse]
+
+myMember[4...6] = ["Three Eagles","Five Flamingoes"]
+println(myMember)
+//[An Ant, A Bat, Two Cats, Dog, Three Eagles, Five Flamingoes, Horse]
+
+myMember.removeAtIndex(0)
+println(myMember)
+//[A Bat, Two Cats, Dog, Three Eagles, Five Flamingoes, Horse]
+
+myMember[2...5] = []
+println(myMember)
+//[A Bat, Two Cats]
 
 
 //LOOP
@@ -315,8 +373,51 @@ C
 DDDD
 */
 
+let myBook = [  "0983":"ABC Book",
+    "0889":"Cartoon Book",
+    "0112":"English Book"]
 
 
+var book = Dictionary<String,String>()
 
+var myGuideBook:Dictionary<Int,String> = [100:"Thai Travel",200:"Esan Travel",400:"Traveler",777:"YES Go",888:"First Time in ?"]
+
+for (num:Int,name:String) in myGuideBook{
+    println("book No.\(num) \(name)")
+}
+
+/*
+book No.200 Esan Travel
+book No.400 Traveler
+book No.777 YES Go
+book No.888 First Time in ?
+book No.100 Thai Travel
+*/
+
+myGuideBook.updateValue("Lost Traveler",forKey:120)
+myGuideBook.updateValue("Thailand Only",forKey:130)
+println(myGuideBook)
+//[400: Traveler, 130: Thailand Only, 100: Thai Travel, 200: Esan Travel, 777: YES Go, 888: First Time in ?, 120: Lost Traveler]
+
+
+myGuideBook.updateValue("Sale! Thai Travle",forKey:100)
+println(myGuideBook)
+//[400: Traveler, 130: Thailand Only, 100: Sale! Thai Travle, 200: Esan Travel, 777: YES Go, 888: First Time in ?, 120: Lost Traveler]
+
+myGuideBook[888] = "First Time in Where?"
+myGuideBook[889] = "First Time in LA"
+println(myGuideBook)
+//[400: Traveler, 130: Thailand Only, 100: Sale! Thai Travle, 200: Esan Travel, 777: YES Go, 888: First Time in Where?, 120: Lost Traveler, 889: First Time in LA]
+
+myGuideBook[100] = nil
+println(myGuideBook)
+//[400: Traveler, 130: Thailand Only, 200: Esan Travel, 777: YES Go, 888: First Time in Where?, 120: Lost Traveler, 889: First Time in LA]
+
+myGuideBook.removeValueForKey(200)
+println(myGuideBook)
+//[400: Traveler, 130: Thailand Only, 120: Lost Traveler, 777: YES Go, 888: First Time in Where?, 889: First Time in LA]
+
+//myGuideBook.removeAtIndex(DictionaryIndex(200,"Esan Travel"))
+//println(myGuideBook)
 
 

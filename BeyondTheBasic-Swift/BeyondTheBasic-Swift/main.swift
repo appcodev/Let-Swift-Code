@@ -10,6 +10,19 @@ import Foundation
 
 println("Beyond the Basic")
 
+var dic = ["A":"123","B":"122"]
+let c:String? = dic["C"]
+//let c = dic["C"]
+//print(c)
+//Unwrapping an Optional
+if let cValue = c {
+    println(cValue)
+}else{
+    println("c is nil")
+}
+
+
+
 let numberOfLegs = ["ant":6, "snake":0, "cheetah":4, "big":1]
 //ถ้าเราดึงค่าของ key ที่ไม่มีอยู่ใน dictionary จะเกิดอะไรขึ้น?
 println(numberOfLegs["dog"])
